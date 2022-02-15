@@ -1,7 +1,8 @@
 <mat-card>
   <mat-toolbar color="primary"><h2>Funcionário - Alimento</h2></mat-toolbar>
 
-  <div *ngif="persons$ | async as persons; else loading">
+  <div *ngIf="persons$ | async as persons; else loading">
+
     <table mat-table [dataSource]="persons" class="mat-elevation-z8">
 
 

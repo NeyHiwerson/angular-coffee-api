@@ -13,6 +13,7 @@ export class PersonsService {
   constructor(private httpClient: HttpClient) { }
 
   list() {
-    return this.httpClient.get<Person[]>(this.API).pipe(tap(persons => console.log(persons)));
+    return this.httpClient.get<Person[]>(this.API)
+    .pipe(first(),delay(1500),tap(persons => console.log(persons)));
   }
 }
