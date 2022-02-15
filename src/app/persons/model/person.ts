@@ -1,5 +1,5 @@
 export interface Person {
-    _id: BigInteger;
+    _id: string;
     name: string;
     cpf: string;
     food: string;

@@ -1,9 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { MatTableModule } from '@angular/material/table';
 
+import { SharedModule } from '../shared/shared.module';
+import { AppMaterialModule } from './../shared/app-material/app-material.module';
 import { PersonsRoutingModule } from './persons-routing.module';
 import { PersonsComponent } from './persons/persons.component';
+
 
 
 @NgModule({
@@ -13,7 +15,8 @@ import { PersonsComponent } from './persons/persons.component';
   imports: [
     CommonModule,
     PersonsRoutingModule,
-    MatTableModule
+    AppMaterialModule,
+    SharedModule
   ]
 })
 export class PersonsModule { }
