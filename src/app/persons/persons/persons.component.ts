@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Person } from '../model/person';
 
 @Component({
   selector: 'app-persons',
@@ -7,7 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PersonsComponent implements OnInit {
 
-  constructor() { }
+  persons: Person[] = [];
+
+  displayedColumns = ['_id','name','cpf','food'];
+
+  constructor() {
+    //this.persons = [];
+   }
 
   ngOnInit(): void {
   }
